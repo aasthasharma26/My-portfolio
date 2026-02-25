@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aastha Sharma | QA & Network Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Aastha Sharma - QA Engineer & Network Engineer with 2 years of experience"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              primary: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+                900: "#1e3a8a",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Custom Animations */
+      .fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .delay-100 {
+        animation-delay: 0.1s;
+      }
+      .delay-200 {
+        animation-delay: 0.2s;
+      }
+      .delay-300 {
+        animation-delay: 0.3s;
+      }
+
+      /* Gradient Text */
+      .gradient-text {
+        background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Hover Card Effect */
+      .hover-lift {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow:
+          0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      /* Timeline Line */
+      .timeline-line::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #e5e7eb;
+        transform: translateX(-50%);
+      }
+
+      @media (max-width: 768px) {
+        .timeline-line::before {
+          left: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-700 bg-gray-50 antialiased">
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#" class="text-2xl font-bold text-gray-900 tracking-tight">
+              Aastha<span class="text-primary-600">Sharma</span>
+            </a>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#about"
+              class="text-gray-600 hover:text-primary-600 font-medium transition-colors duration-200"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="text-gray-600 hover:text-primary-600 font-medium transition-colors duration-200"
+              >Skills</a
+            >
+            <a
+              href="#experience"
+              class="text-gray-600 hover:text-primary-600 font-medium transition-colors duration-200"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-600 hover:text-primary-600 font-medium transition-colors duration-200"
+              >Projects</a
+            >
+            <a
+              href="#certifications"
+              class="text-gray-600 hover:text-primary-600 font-medium transition-colors duration-200"
+              >Certifications</a
+            >
+            <a
+              href="#contact"
+              class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200 font-medium"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-600 hover:text-primary-600 focus:outline-none"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-100"
+      >
+        <div class="px-4 pt-2 pb-4 space-y-1">
+          <a
+            href="#about"
+            class="block px-3 py-2 text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="block px-3 py-2 text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md"
+            >Skills</a
+          >
+          <a
+            href="#experience"
+            class="block px-3 py-2 text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md"
+            >Experience</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md"
+            >Projects</a
+          >
+          <a
+            href="#certifications"
+            class="block px-3 py-2 text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md"
+            >Certifications</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-primary-600 font-medium"
+            >Contact Me</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-primary-50 pt-16 overflow-hidden"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-30">
+        <div
+          class="absolute top-20 left-10 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse"
+        ></div>
+        <div
+          class="absolute top-40 right-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"
+        ></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="fade-in-up">
+          <div
+            class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold text-primary-700 bg-primary-100 rounded-full border border-primary-200"
+          >
+            <i class="fas fa-briefcase mr-2"></i>2 Years Experience
+          </div>
+          <h1
+            class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight"
+          >
+            Hi, I'm <span class="gradient-text">Aastha Sharma</span>
+          </h1>
+          <h2 class="text-2xl md:text-3xl text-gray-600 mb-8 font-light">
+            QA Engineer & Network Engineer
+          </h2>
+          <p
+            class="max-w-2xl mx-auto text-lg text-gray-600 mb-10 leading-relaxed"
+          >
+            Detail-oriented professional with 2 years of experience ensuring
+            software quality and maintaining robust network infrastructure.
+            Passionate about delivering bug-free applications and optimizing
+            network performance through systematic testing and proactive
+            troubleshooting.
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <a
+              href="#"
+              class="px-8 py-4 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2 group"
+            >
+              <i class="fas fa-download group-hover:animate-bounce"></i>
+              Download Resume
+            </a>
+            <a
+              href="#contact"
+              class="px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-xl font-semibold hover:bg-primary-50 transition-all duration-300 flex items-center gap-2"
+            >
+              <i class="fas fa-envelope"></i>
+              Contact Me
+            </a>
+          </div>
+
+          <!-- Scroll Indicator -->
+          <div class="mt-20 animate-bounce">
+            <a
+              href="#about"
+              class="text-gray-400 hover:text-primary-600 transition-colors"
+            >
+              <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="fade-in-up">
+            <div class="relative">
+              <div
+                class="absolute -inset-4 bg-gradient-to-r from-primary-500 to-blue-600 rounded-2xl opacity-20 blur-lg"
+              ></div>
+              <div
+                class="relative bg-gray-100 rounded-2xl overflow-hidden aspect-square flex items-center justify-center"
+              >
+                <img src="/public/aasthasharma.jpg" />
+              </div>
+            </div>
+          </div>
+
+          <div class="fade-in-up delay-100">
+            <h2 class="text-primary-600 font-semibold text-lg mb-2">
+              About Me
+            </h2>
+            <h3 class="text-4xl font-bold text-gray-900 mb-6">
+              Dedicated to Quality & Reliability
+            </h3>
+            <div class="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                I am a versatile IT professional with dual expertise in Quality
+                Assurance and Network Engineering. Over the past 2 years, I have
+                developed a keen eye for detail and a systematic approach to
+                identifying and resolving issues before they impact end users.
+              </p>
+              <p>
+                In QA, I specialize in
+                <strong>manual testing methodologies</strong>, crafting
+                comprehensive test cases, and performing thorough regression
+                testing. I'm also building my automation skills with Selenium to
+                increase testing efficiency.
+              </p>
+              <p>
+                On the networking side, I possess solid fundamentals in
+                <strong>TCP/IP, OSI Model, and routing protocols</strong>. I
+                excel at configuring network devices, implementing VLANs, and
+                troubleshooting complex connectivity issues to ensure maximum
+                uptime.
+              </p>
+              <p>
+                My passion lies in bridging the gap between software quality and
+                infrastructure stability, ensuring seamless user experiences
+                through rigorous testing and robust network architecture.
+              </p>
+            </div>
+
+            <div class="mt-8 flex gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary-600">2+</div>
+                <div class="text-sm text-gray-500">Years Exp.</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary-600">50+</div>
+                <div class="text-sm text-gray-500">Projects</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary-600">100%</div>
+                <div class="text-sm text-gray-500">Commitment</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in-up">
+          <h2 class="text-primary-600 font-semibold text-lg mb-2">
+            My Expertise
+          </h2>
+          <h3 class="text-4xl font-bold text-gray-900">Technical Skills</h3>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- QA Skills -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover-lift fade-in-up delay-100 border border-gray-100"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-bug text-primary-600 text-xl"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-gray-900">QA Engineering</h4>
+            </div>
+
+            <div class="space-y-4">
+              <div
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-primary-50 transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-check-circle text-primary-500 mr-3"></i>
+                  <span class="font-medium text-gray-700">Manual Testing</span>
+                </div>
+                <span class="text-sm text-gray-500">Advanced</span>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-primary-50 transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-file-alt text-primary-500 mr-3"></i>
+                  <span class="font-medium text-gray-700"
+                    >Test Case Writing</span
+                  >
+                </div>
+                <span class="text-sm text-gray-500">Advanced</span>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-primary-50 transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-redo text-primary-500 mr-3"></i>
+                  <span class="font-medium text-gray-700"
+                    >Regression Testing</span
+                  >
+                </div>
+                <span class="text-sm text-gray-500">Advanced</span>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-primary-50 transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-plug text-primary-500 mr-3"></i>
+                  <span class="font-medium text-gray-700">API Testing</span>
+                </div>
+                <span class="text-sm text-gray-500">Intermediate</span>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-primary-50 transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fab fa-jira text-primary-500 mr-3"></i>
+                  <span class="font-medium text-gray-700"
+                    >Bug Tracking (JIRA)</span
+                  >
+                </div>
+                <span class="text-sm text-gray-500">Advanced</span>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-primary-50 transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-robot text-primary-500 mr-3"></i>
+                  <span class="font-medium text-gray-700"
+                    >Selenium (Basic)</span
+                  >
+                </div>
+                <span class="text-sm text-gray-500">Beginner</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Networking Skills -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover-lift fade-in-up delay-200 border border-gray-100"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-network-wired text-blue-600 text-xl"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-gray-900">
+                Network Engineering
+              </h4>
+            </div>
+
+            <div class="space-y-4">
+              <div
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-ethernet text-blue-500 mr-3"></i>
+                  <span class="font-medium text-gray-700">TCP/IP</span>
+                </div>
+                <span class="text-sm text-gray-500">Advanced</span>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-layer-group text-blue-500 mr-3"></i>
+                  <span class="font-medium text-gray-700">OSI Model</span>
+                </div>
+                <span class="text-sm text-gray-500">Advanced</span>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-route text-blue-500 mr-3"></i>
+                  <span class="font-medium text-gray-700"
+                    >Routing & Switching</span
+                  >
+                </div>
+                <span class="text-sm text-gray-500">Intermediate</span>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-project-diagram text-blue-500 mr-3"></i>
+                  <span class="font-medium text-gray-700">VLAN</span>
+                </div>
+                <span class="text-sm text-gray-500">Intermediate</span>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-shield-alt text-blue-500 mr-3"></i>
+                  <span class="font-medium text-gray-700">Firewall Basics</span>
+                </div>
+                <span class="text-sm text-gray-500">Intermediate</span>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-tools text-blue-500 mr-3"></i>
+                  <span class="font-medium text-gray-700"
+                    >Network Troubleshooting</span
+                  >
+                </div>
+                <span class="text-sm text-gray-500">Advanced</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in-up">
+          <h2 class="text-primary-600 font-semibold text-lg mb-2">
+            Career Journey
+          </h2>
+          <h3 class="text-4xl font-bold text-gray-900">
+            Professional Experience
+          </h3>
+        </div>
+
+        <div class="relative timeline-line">
+          <!-- QA Engineer Role -->
+          <div class="relative mb-12 md:mb-0 fade-in-up delay-100">
+            <div class="md:flex items-center justify-between">
+              <div class="md:w-5/12 md:text-right mb-4 md:mb-0 md:pr-8">
+                <div
+                  class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover-lift"
+                >
+                  <span
+                    class="inline-block px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-2"
+                    >2023 - Present</span
+                  >
+                  <h4 class="text-xl font-bold text-gray-900 mb-2">
+                    QA Engineer
+                  </h4>
+                  <p class="text-gray-500 text-sm mb-4">
+                    Tech Solutions Pvt. Ltd.
+                  </p>
+                  <ul class="space-y-2 text-gray-600 text-sm">
+                    <li class="flex items-start md:justify-end">
+                      <span class="md:order-2 md:ml-2"
+                        >Wrote and executed comprehensive test cases</span
+                      >
+                      <i
+                        class="fas fa-check text-primary-500 mt-1 md:order-1 md:mr-2"
+                      ></i>
+                    </li>
+                    <li class="flex items-start md:justify-end">
+                      <span class="md:order-2 md:ml-2"
+                        >Identified, documented, and tracked bugs using
+                        JIRA</span
+                      >
+                      <i
+                        class="fas fa-check text-primary-500 mt-1 md:order-1 md:mr-2"
+                      ></i>
+                    </li>
+                    <li class="flex items-start md:justify-end">
+                      <span class="md:order-2 md:ml-2"
+                        >Performed regression testing for major releases</span
+                      >
+                      <i
+                        class="fas fa-check text-primary-500 mt-1 md:order-1 md:mr-2"
+                      ></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-lg z-10"
+              ></div>
+
+              <div class="md:w-5/12 md:pl-8 ml-16 md:ml-0">
+                <div class="hidden md:block h-full"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Network Support Engineer Role -->
+          <div class="relative fade-in-up delay-200">
+            <div class="md:flex items-center justify-between">
+              <div class="md:w-5/12 md:pr-8 mb-4 md:mb-0 md:text-right order-1">
+                <div class="hidden md:block h-full"></div>
+              </div>
+
+              <div
+                class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"
+              ></div>
+
+              <div class="md:w-5/12 md:pl-8 ml-16 md:ml-0 order-2">
+                <div
+                  class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover-lift"
+                >
+                  <span
+                    class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-2"
+                    >2022 - 2023</span
+                  >
+                  <h4 class="text-xl font-bold text-gray-900 mb-2">
+                    Network Support Engineer
+                  </h4>
+                  <p class="text-gray-500 text-sm mb-4">
+                    NetworkFirst Solutions
+                  </p>
+                  <ul class="space-y-2 text-gray-600 text-sm">
+                    <li class="flex items-start">
+                      <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                      <span
+                        >Configured and maintained routers and switches</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                      <span
+                        >Monitored network performance and uptime metrics</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                      <span
+                        >Resolved complex connectivity and latency issues</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in-up">
+          <h2 class="text-primary-600 font-semibold text-lg mb-2">Portfolio</h2>
+          <h3 class="text-4xl font-bold text-gray-900">Featured Projects</h3>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift fade-in-up delay-100 border border-gray-100 group"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center relative overflow-hidden"
+            >
+              <i
+                class="fas fa-globe text-6xl text-white/30 absolute transform group-hover:scale-110 transition-transform duration-500"
+              ></i>
+              <i class="fas fa-bug text-5xl text-white relative z-10"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span
+                  class="px-3 py-1 bg-primary-100 text-primary-700 text-xs font-semibold rounded-full"
+                  >QA Project</span
+                >
+                <div class="flex space-x-2">
+                  <i
+                    class="fab fa-github text-gray-400 hover:text-gray-600 cursor-pointer"
+                  ></i>
+                  <i
+                    class="fas fa-external-link-alt text-gray-400 hover:text-gray-600 cursor-pointer"
+                  ></i>
+                </div>
+              </div>
+              <h4 class="text-xl font-bold text-gray-900 mb-2">
+                E-Commerce Web Testing
+              </h4>
+              <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                Comprehensive manual testing of a full-stack e-commerce platform
+                including functional testing, usability testing, and
+                cross-browser compatibility verification.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                  >Manual Testing</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                  >JIRA</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                  >Test Cases</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift fade-in-up delay-200 border border-gray-100 group"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center relative overflow-hidden"
+            >
+              <i
+                class="fas fa-network-wired text-6xl text-white/30 absolute transform group-hover:scale-110 transition-transform duration-500"
+              ></i>
+              <i class="fas fa-server text-5xl text-white relative z-10"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full"
+                  >Network Project</span
+                >
+                <div class="flex space-x-2">
+                  <i
+                    class="fab fa-github text-gray-400 hover:text-gray-600 cursor-pointer"
+                  ></i>
+                  <i
+                    class="fas fa-external-link-alt text-gray-400 hover:text-gray-600 cursor-pointer"
+                  ></i>
+                </div>
+              </div>
+              <h4 class="text-xl font-bold text-gray-900 mb-2">
+                Network Infrastructure Lab
+              </h4>
+              <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                Designed and implemented a simulated enterprise network topology
+                using Cisco Packet Tracer, featuring VLAN segmentation,
+                inter-VLAN routing, and ACL configurations.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                  >Cisco</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                  >VLAN</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                  >Routing</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift fade-in-up delay-300 border border-gray-100 group"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center relative overflow-hidden"
+            >
+              <i
+                class="fas fa-code text-6xl text-white/30 absolute transform group-hover:scale-110 transition-transform duration-500"
+              ></i>
+              <i class="fas fa-plug text-5xl text-white relative z-10"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span
+                  class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded-full"
+                  >API Project</span
+                >
+                <div class="flex space-x-2">
+                  <i
+                    class="fab fa-github text-gray-400 hover:text-gray-600 cursor-pointer"
+                  ></i>
+                  <i
+                    class="fas fa-external-link-alt text-gray-400 hover:text-gray-600 cursor-pointer"
+                  ></i>
+                </div>
+              </div>
+              <h4 class="text-xl font-bold text-gray-900 mb-2">
+                REST API Testing Suite
+              </h4>
+              <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                Developed an API testing framework using Postman and Newman for
+                automated validation of RESTful endpoints, including
+                authentication, data validation, and error handling scenarios.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                  >Postman</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                  >Newman</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                  >JSON</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in-up">
+          <h2 class="text-primary-600 font-semibold text-lg mb-2">
+            Credentials
+          </h2>
+          <h3 class="text-4xl font-bold text-gray-900">Certifications</h3>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- ISTQB -->
+          <div
+            class="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 transition-all duration-300 hover:shadow-lg group fade-in-up delay-100"
+          >
+            <div class="flex items-start justify-between mb-4">
+              <div
+                class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center group-hover:bg-primary-600 transition-colors duration-300"
+              >
+                <i
+                  class="fas fa-certificate text-2xl text-primary-600 group-hover:text-white transition-colors"
+                ></i>
+              </div>
+              <span
+                class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full"
+                >Active</span
+              >
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-1">
+              ISTQB Foundation
+            </h4>
+            <p class="text-sm text-gray-500 mb-3">
+              International Software Testing Qualifications Board
+            </p>
+            <p class="text-gray-600 text-sm">
+              Certified in software testing fundamentals, test design
+              techniques, and test management principles.
+            </p>
+          </div>
+
+          <!-- CCNA -->
+          <div
+            class="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-blue-300 transition-all duration-300 hover:shadow-lg group fade-in-up delay-200"
+          >
+            <div class="flex items-start justify-between mb-4">
+              <div
+                class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i
+                  class="fas fa-network-wired text-2xl text-blue-600 group-hover:text-white transition-colors"
+                ></i>
+              </div>
+              <span
+                class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-bold rounded-full"
+                >In Progress</span
+              >
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-1">CCNA</h4>
+            <p class="text-sm text-gray-500 mb-3">
+              Cisco Certified Network Associate
+            </p>
+            <p class="text-gray-600 text-sm">
+              Preparing for comprehensive networking certification covering
+              routing, switching, and network security.
+            </p>
+          </div>
+
+          <!-- Additional Cert -->
+          <div
+            class="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-purple-300 transition-all duration-300 hover:shadow-lg group fade-in-up delay-300"
+          >
+            <div class="flex items-start justify-between mb-4">
+              <div
+                class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-600 transition-colors duration-300"
+              >
+                <i
+                  class="fas fa-award text-2xl text-purple-600 group-hover:text-white transition-colors"
+                ></i>
+              </div>
+              <span
+                class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full"
+                >Completed</span
+              >
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-1">
+              Google IT Support
+            </h4>
+            <p class="text-sm text-gray-500 mb-3">
+              Coursera Professional Certificate
+            </p>
+            <p class="text-gray-600 text-sm">
+              Comprehensive IT support training covering troubleshooting,
+              customer service, networking, and system administration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Contact Info -->
+          <div class="fade-in-up">
+            <h2 class="text-primary-400 font-semibold text-lg mb-2">
+              Get In Touch
+            </h2>
+            <h3 class="text-4xl font-bold mb-6">Let's Work Together</h3>
+            <p class="text-gray-300 mb-8 leading-relaxed">
+              I'm currently open to new opportunities in QA Engineering and
+              Network Engineering roles. Whether you have a question or just
+              want to say hi, feel free to reach out!
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-center group">
+                <div
+                  class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mr-4 group-hover:bg-primary-600 transition-colors"
+                >
+                  <i class="fas fa-envelope text-xl"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-400">Email</p>
+                  <a
+                    href="mailto:as26aastha@mail.com"
+                    class="text-lg font-medium hover:text-primary-400 transition-colors"
+                    >as26aastha@mail.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-center group">
+                <div
+                  class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mr-4 group-hover:bg-primary-600 transition-colors"
+                >
+                  <i class="fas fa-phone text-xl"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-400">Phone</p>
+                  <a
+                    href="tel:+917217271009"
+                    class="text-lg font-medium hover:text-primary-400 transition-colors"
+                    >+91 7217271009</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-center group">
+                <div
+                  class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mr-4 group-hover:bg-primary-600 transition-colors"
+                >
+                  <i class="fab fa-linkedin text-xl"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-400">LinkedIn</p>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/aastha-sharma-057558258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    class="text-lg font-medium hover:text-primary-400 transition-colors"
+                    >linkedin.com/in/aasthasharma</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-center group">
+                <div
+                  class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mr-4 group-hover:bg-primary-600 transition-colors"
+                >
+                  <i class="fab fa-github text-xl"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-400">GitHub</p>
+                  <a
+                    target="_blank"
+                    href="https://github.com/Aru2609"
+                    class="text-lg font-medium hover:text-primary-400 transition-colors"
+                    >github.com/aasthasharma</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div
+            class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 fade-in-up delay-100"
+          >
+            <form class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-primary-500 text-white placeholder-gray-400 transition-colors"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-primary-500 text-white placeholder-gray-400 transition-colors"
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-primary-500 text-white placeholder-gray-400 transition-colors"
+                  placeholder="Project Inquiry"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2"
+                  >Message</label
+                >
+                <textarea
+                  rows="4"
+                  class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-primary-500 text-white placeholder-gray-400 transition-colors resize-none"
+                  placeholder="Your message here..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <span class="text-2xl font-bold text-white tracking-tight">
+              Aastha<span class="text-primary-500">Sharma</span>
+            </span>
+            <p class="text-gray-400 text-sm mt-2">
+              QA Engineer & Network Engineer
+            </p>
+          </div>
+
+          <div class="flex space-x-6 mb-4 md:mb-0">
+            <a
+              href="#"
+              class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="mailto:as26aastha@mail.com"
+              class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400"
+        >
+          <p>&copy; 2024 Aastha Sharma. All rights reserved.</p>
+          <p class="mt-2 md:mt-0 flex items-center gap-2">
+            Built with <i class="fas fa-heart text-red-500"></i> using HTML &
+            Tailwind CSS
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking on a link
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("shadow-md");
+        } else {
+          navbar.classList.remove("shadow-md");
+        }
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Intersection Observer for fade-in animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in-up").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Form submission handler (UI only)
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert(
+          "Thank you for your message! This is a demo form. In a real implementation, this would send your message to the server.",
+        );
+      });
+    </script>
+  </body>
+</html>
